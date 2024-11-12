@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+    <%- include('../partials/header'); %>
+
+<main>
+<!-- <h1>Kram's Notes</h1> -->
+ <!-- Jumbotron -->
+<div class="p-5 text-center bg-body-tertiary">
+    <div class="container py-5">
+      <h1 class="text-body-emphasis">Put blog post here</h1>
+      <p class="col-lg-8 mx-auto lead">
+        LORUM IPSUM <code>.container</code> LORUM PSUM
+      </p>
+    </div>
+  </div>
+
+<!-- Blog preview = put recent post here -->
+  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+      <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+      <h3 class="mb-0"><%- blogPosts %></h3>
+      <div class="mb-1 text-body-secondary"><%- blogPosts %></div>
+      <p class="mb-auto">lorum ipsum.</p>
+      <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+        Continue reading
+        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+      </a>
+    </div>
+    
+   <!-- This is just the image bit of the block -->
+    <div class="col-auto d-none d-lg-block">
+      <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    </div>
+  </div>
+
+    <%- include('../partials/post'); %>
+
+    
+
+    
+</main>
+
+    <h1></h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
