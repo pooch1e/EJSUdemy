@@ -21,7 +21,8 @@ const blogPosts = [];
 
 //get index
 app.get("/", function(req, res) {
-  res.render("pages/index", { blogPosts });
+  const lastBlogPost = blogPosts.length > 0 ? blogPosts[blogPosts.length - 1] : null;
+  res.render("pages/index", { blogPosts, lastBlogPost });
 });
 
 //about page
@@ -35,6 +36,18 @@ app.post("/add-post", (req, res) => {
   blogPosts.push({ title, content });
   res.redirect('/');
 });
+//route to handle post submissions by index
+app.get("/post/:index", (req, res) => {
+  const postIndex = req.params.index;
+  const post = blogPosts[postIndex];
+  
+  if (post) {
+    res.render("pages/post", { post });
+  } else {
+    res.status(404).send("Post not found");
+  }
+});
+
 
 //route to handle post Updates GET
 app.get("/pages/edit/:index", (req, res) => {

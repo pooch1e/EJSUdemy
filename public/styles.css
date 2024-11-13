@@ -1,8 +1,20 @@
-.navbar-brand, row {
+/* .navbar-brand, row {
     padding: 10px;
 
 }
 
 .blogForm {
     padding: 10px;
+} */
+
+.backgroundban {
+    background-image: url('/public/assets/dkram_banner.jpg'); /* Make sure this path is correct */
+    background-size: cover; /* Scale the image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 300px; /* Set a height for the container */
+    width: 100%; /* Full width of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
